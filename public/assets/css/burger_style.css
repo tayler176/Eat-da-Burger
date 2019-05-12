@@ -1,0 +1,17 @@
+#header{
+    margin-top: 50px
+}
+
+body{
+    background-image: url("/assets/img/gourmet-burger.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+.container{
+    margin-top: 25px;
+}
+
+.headers{
+    color: white
+}
