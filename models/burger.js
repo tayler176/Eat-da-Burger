@@ -2,7 +2,7 @@ var orm = require("../config/orm.js");
 
 var burger = {
     selectAll: function(cb) {
-        orm.selectAll("burgers", function(res){
+        orm.selectAll( function(res){
             cb(res);
             console.log("select all function")
         })
@@ -13,12 +13,11 @@ var burger = {
             console.log("inseset one function")
         })
     },
-    updateOne: function(burger, id, cb) {
-        orm.updateOne(burger, id ,function(res){
+    updateOne: function(id, cb) {
+        orm.updateOne([id] ,function(res){
             cb(res);
             console.log("update one function")
         })
-        
     }
 }
 

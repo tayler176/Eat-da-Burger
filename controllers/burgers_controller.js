@@ -5,7 +5,7 @@ var burger = require("../models/burger.js");
 router.get("/", function(req, res){
     burger.selectAll(function(data){
         var hbsobject = {
-            burgers: data
+          burgers: data
         }
         console.log(hbsobject);
         res.render("index", hbsobject)
@@ -13,7 +13,7 @@ router.get("/", function(req, res){
 });
 
 router.post("/", function(req, res) {
-    burger.insertOne(req.body.name, function(){
+    burger.insertOne(req.body.burger_name, function(){
       res.redirect("/")
     }
   )
